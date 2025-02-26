@@ -1,0 +1,231 @@
+.container {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+}
+
+.bookmark {
+  background: linear-gradient(135deg, #4a88ff, #3a78ef);
+  color: white;
+  padding: 0.8rem 0.5rem;
+  border-radius: 8px 0 0 8px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: none;
+  z-index: 1001;
+}
+
+.bookmark:hover {
+  padding-bottom: 1.2rem;
+  background: linear-gradient(135deg, #3a78ef, #2a68df);
+}
+
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.modalContainer.visible {
+  transform: translate(0, -50%);
+  pointer-events: auto;
+}
+
+.modal {
+  position: relative;
+  width: 350px;
+  max-width: 90vw;
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+  border-radius: 12px 0 0 12px;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  overflow: hidden;
+  color: #f5f5f5;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #f5f5f5;
+  transition: background 0.3s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modalHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(90deg, #f5f5f5, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modalSubtitle {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0.3rem 0 0;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contentTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contentText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a88ff;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #4a88ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.ctaButton:hover {
+  background: #3a78ef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 136, 255, 0.3);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .icon {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal {
+    width: 300px;
+  }
+
+  .contentTitle {
+    font-size: 1.1rem;
+  }
+
+  .contentText {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 280px;
+  }
+
+  .modalTitle {
+    font-size: 1.3rem;
+  }
+
+  .modalSubtitle {
+    font-size: 0.8rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .statItem {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .ctaButton {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+

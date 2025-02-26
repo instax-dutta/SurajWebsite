@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  background: #121212;
+  color: #f5f5f5;
+  width: 100%;
+  font-family: "Scope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+@font-face {
+  font-family: "Scope";
+  src: url("https://temper.one/assets/fonts/Scope-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scope";
+  src: url("https://temper.one/assets/fonts/Scope-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
