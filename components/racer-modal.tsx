@@ -66,7 +66,8 @@ export default function RacerModal() {
             </div>
 
             <a href="https://racer.news" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
-              Visit Racer News <ExternalLink size={16} className={styles.icon} />
+              <span className={styles.buttonText}>Get Yours Now!!</span>{" "}
+              <ExternalLink size={16} className={styles.icon} />
             </a>
           </div>
         </div>

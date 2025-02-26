@@ -50,7 +50,7 @@
 }
 
 .text h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   background: linear-gradient(90deg, #f5f5f5, #a0a0a0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,7 +100,7 @@
 }
 
 .currentSection h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -127,7 +127,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   line-height: 1.6;
   position: relative;
   padding-left: 1.5rem;
@@ -160,7 +160,7 @@
 }
 
 .subDetail {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   opacity: 0.8;
   margin-left: 0.5rem;
   transition: opacity 0.3s ease;
@@ -183,7 +183,7 @@
   border: 1px solid rgba(74, 136, 255, 0.3);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   transition: all 0.3s ease;
 }
 
@@ -220,12 +220,12 @@
     font-size: 2rem;
   }
 
-  .text h1 {
-    font-size: 2.5rem;
+  .currentSection {
+    padding: 1.25rem;
   }
 
-  .currentSection h2 {
-    font-size: 1.8rem;
+  .header {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -234,10 +234,6 @@
   .text {
     padding: 1rem;
     font-size: 1.5rem;
-  }
-
-  .text h1 {
-    font-size: 2rem;
   }
 
   .header {
@@ -249,28 +245,16 @@
     margin-top: 2rem;
   }
 
-  .currentSection h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
   .listItem {
-    font-size: 1rem;
     padding-left: 1.2rem;
   }
 
-  .subDetail {
-    font-size: 0.9rem;
-    margin-left: 0.3rem;
-  }
-
   .skillsList {
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
   .skillItem {
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
   }
 }
 
@@ -281,12 +265,8 @@
     font-size: 1.2rem;
   }
 
-  .text h1 {
-    font-size: 1.8rem;
-  }
-
-  .text p {
-    font-size: 1rem !important;
+  .header {
+    margin-bottom: 1.5rem;
   }
 
   .currentSection {
@@ -294,18 +274,38 @@
     margin-top: 1.5rem;
   }
 
-  .currentSection h2 {
-    font-size: 1.3rem;
+  .listItem {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    padding-left: 1rem;
+  }
+
+  .skillsList {
+    gap: 0.5rem;
+  }
+
+  .skillItem {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .text {
+    padding: 0.6rem;
+  }
+
+  .header {
+    margin-bottom: 1.2rem;
+  }
+
+  .currentSection {
+    padding: 0.7rem;
+    margin-top: 1.2rem;
   }
 
   .listItem {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .subDetail {
-    font-size: 0.8rem;
+    padding-left: 0.8rem;
   }
 
   .skillsList {
@@ -313,8 +313,8 @@
   }
 
   .skillItem {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
